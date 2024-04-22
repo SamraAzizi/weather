@@ -26,3 +26,14 @@ body{
   color: #555555;
 
 }
+
+.search-engine button{
+  border: none;
+  border-radius: 8px;
+  background-color: black;
+  color: aliceblue;
+  font-size: 20px;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 15px;
+}

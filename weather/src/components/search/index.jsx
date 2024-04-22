@@ -14,7 +14,7 @@ export default function Search({search, setSearch, handleSearch}){
         
         
         />
-        <button className="search-button" onClick={handleSearch}>Search Weather</button>
+        <button onClick={handleSearch}>Search Weather</button>
        
     </div>
 }
