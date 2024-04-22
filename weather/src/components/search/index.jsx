@@ -1,7 +1,7 @@
 
 
 
-export default function Search({search, setSearch}){
+export default function Search({search, setSearch, handleSearch}){
     return <div className="search-engine">
 
         <input
@@ -14,7 +14,7 @@ export default function Search({search, setSearch}){
         
         
         />
-        <button></button>
+        <button className="search-button" onClick={handleSearch}>Search Weather</button>
        
     </div>
 }
