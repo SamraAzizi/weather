@@ -8,6 +8,15 @@ export default function Weather(){
     const [ loading, setLoading] = useState(false);
     const [weatherData, setWeatherData] = useState(null);
 
+    async function fetchWeatherData(){
+        try{
+
+        }catch(e){
+            console.log(e)
+        }
+
+    }
+
 
     async function handleSearch(){
 
