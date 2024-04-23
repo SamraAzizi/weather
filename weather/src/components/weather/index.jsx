@@ -10,6 +10,8 @@ export default function Weather(){
 
     async function fetchWeatherData(){
         try{
+            const response = await fetch();
+            const data = await response.json();
 
         }catch(e){
             console.log(e)
