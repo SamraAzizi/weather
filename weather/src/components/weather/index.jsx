@@ -1,5 +1,5 @@
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Search from "../search"
 
 
@@ -32,6 +32,13 @@ export default function Weather(){
 
     }
 
+
+    useEffect(()=>{
+        fetchWeatherData(`banglaore`)
+
+    },[])
+    console.log(weatherData);
+
     return <div>
         <Search
         search={search}
@@ -39,6 +46,15 @@ export default function Weather(){
         handleSearch={handleSearch}
         
         />
+        {
+            loading ? <div>Loading...</div>:
+            <div>
+                <div className="city-name">
+                    <h2></h2>
+                </div>
+
+            </div>
+        }
         Weather
     </div>
 }
