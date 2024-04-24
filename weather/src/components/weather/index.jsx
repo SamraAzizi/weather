@@ -8,10 +8,15 @@ export default function Weather(){
     const [ loading, setLoading] = useState(false);
     const [weatherData, setWeatherData] = useState(null);
 
-    async function fetchWeatherData(){
+    async function fetchWeatherData(param){
+        setLoading(true)
+
         try{
             const response = await fetch();
             const data = await response.json();
+            if(data){
+                setLoading(false)
+            }
 
         }catch(e){
             console.log(e)
@@ -20,7 +25,8 @@ export default function Weather(){
     }
 
 
-    async function handleSearch(){
+    function handleSearch(){
+        fetchWeatherData(search)
 
     }
 
