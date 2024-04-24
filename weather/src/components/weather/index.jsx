@@ -15,10 +15,12 @@ export default function Weather(){
             const response = await fetch();
             const data = await response.json();
             if(data){
+                setWeatherData(data)
                 setLoading(false)
             }
 
         }catch(e){
+            setLoading(false)
             console.log(e)
         }
 
