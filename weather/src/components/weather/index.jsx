@@ -32,6 +32,11 @@ export default function Weather(){
 
     }
 
+    function getCurrentDate(){
+        return new Data().toLocalDateString('en-us',{})
+
+    }
+
 
     useEffect(()=>{
         fetchWeatherData(`banglaore`)
@@ -51,6 +56,11 @@ export default function Weather(){
             <div>
                 <div className="city-name">
                     <h2>{weatherData?.name},<span>{weatherData?.sys?.country}</span> </h2>
+                </div>
+                <div className="date">
+
+                    <span>{getCurrentDate()}</span>
+
                 </div>
 
             </div>
