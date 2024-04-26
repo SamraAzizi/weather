@@ -33,7 +33,12 @@ export default function Weather(){
     }
 
     function getCurrentDate(){
-        return new Data().toLocalDateString('en-us',{})
+        return new Data().toLocalDateString('en-us',{
+            weekday : 'long',
+            month: 'long',
+            day: 'numeric',
+            yeaer: 'numeric'
+        })
 
     }
 
